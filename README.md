@@ -1,4 +1,4 @@
-# BASIS DATA Laporan 3
+# LAPORAN PRAKTIKUM 3 BASIS DATA
 # STRUKTUR TABEL SISTEM NASABAH BANK
 ![Struktur Table](https://github.com/HafidzAshshidiqi/BASDA-Laporan-3/assets/125180024/f80c9737-7742-4687-869b-11607e49789a)
 Pembahasan :
