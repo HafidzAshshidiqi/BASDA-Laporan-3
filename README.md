@@ -18,12 +18,13 @@ Tabel Cabang_Bank digunakan untuk menyimpan informasi tentang cabang-cabang bank
 Hubungan antara tabel-tabel ini biasanya dijalin melalui kunci asing (foreign key) yang memungkinkan untuk menghubungkan data di antara tabel-tabel tersebut. 
 
 # Tabel Nasabah
-![Table nasabah](https://github.com/HafidzAshshidiqi/BASDA-Laporan-3/assets/125180024/02d61e98-00b1-4354-8ef0-5f54d30428c0)
+![tabel nasabah](https://github.com/HafidzAshshidiqi/BASDA-Laporan-3/assets/125180024/b50df0ac-b350-40d7-a469-e14bc7f7247c)
 Pembahasan :
 
 Tabel Nasabah digunakan untuk menyimpan data tentang nasabah bank, seperti identitas personal mereka.
 Struktur tabel Nasabah mungkin mencakup kolom seperti ID Nasabah, Nama Nasabah, Alamat, Nomor Telepon, Tanggal Lahir, dan sebagainya.
 ID Nasabah biasanya digunakan sebagai kunci utama (primary key) untuk tabel ini untuk mengidentifikasi setiap nasabah secara unik.
+ID Rekening dideklarasikan sebagai Foreign KEY yang mengambil dalam kolom id_rekening dalam tabel Rekening_Bank yang akan menghubungkan tabel Nasabah dengan tabel Rekening_Bank.
 # Data Tabel Nasabah
 ![Data nasabah](https://github.com/HafidzAshshidiqi/BASDA-Laporan-3/assets/125180024/c49896a2-dac2-48fe-81b4-dc41f8c18692)
 
@@ -31,13 +32,14 @@ Pembahasan :
 
 Data pada gambar diatas merupakan sebuah contoh dari data dalam Nasabah di sistem nasabah bank dalam sebuah database.
 # Tabel Rekening Bank
-![table rekening bank](https://github.com/HafidzAshshidiqi/BASDA-Laporan-3/assets/125180024/59845cda-8409-4573-996e-aa1987e1f9bc)
+![tabel rekening bank](https://github.com/HafidzAshshidiqi/BASDA-Laporan-3/assets/125180024/6ea53952-27b2-4fa7-a746-04328760c007)
 
 Pembahasan:
 
 Tabel Rekening_Bank digunakan untuk menyimpan informasi tentang rekening bank yang dimiliki oleh nasabah.
 Struktur tabel ini mungkin mencakup kolom seperti ID Rekening, Nomor Rekening, Saldo, Tanggal Pembukaan Rekening, Jenis Rekening , dan id_Nasabah (kunci asing yang menghubungkan rekening dengan nasabah tertentu).
 ID Rekening biasanya digunakan sebagai kunci utama.
+ID Nasabah dideklarasikan sebagai Foreign KEY yang mengambil dalam kolom id_nasabah dalam tabel Nasabah_Bank yang akan menghubungkan tabel Rekening_Bank dengan tabel Nasabah.
 # Data tabel Rekening Bank
 ![data rekening bank](https://github.com/HafidzAshshidiqi/BASDA-Laporan-3/assets/125180024/4699aed5-9f7c-48c0-822c-5cc1b73d4fc7)
 
@@ -45,13 +47,14 @@ Pembahasan :
 
 Data pada gambar diatas merupakan sebuah contoh dari data rekening_bank di sistem nasabah bank dalam sebuah database.
 # Tabel Transaksi
-![table transaksi](https://github.com/HafidzAshshidiqi/BASDA-Laporan-3/assets/125180024/992cd054-be03-4794-bf41-e730081808ca)
+![tabel transaksi](https://github.com/HafidzAshshidiqi/BASDA-Laporan-3/assets/125180024/68923c95-7830-4fbf-a4de-4b90153ed44f)
 
 Pembahasan:
 
 Tabel Transaksi digunakan untuk mencatat setiap transaksi yang terjadi pada rekening bank.
 Struktur tabel Transaksi mungkin mencakup kolom seperti ID Transaksi, ID Rekening (kunci asing yang menghubungkan transaksi dengan rekening tertentu), Tanggal Transaksi, Jenis Transaksi (penarikan, setoran, transfer, dll.), Jumlah Transaksi, dan deskripsi lainnya.
 ID Transaksi biasanya digunakan sebagai kunci utama.
+ID Rekening dideklarasikan sebagai Foreign KEY yang mengambil dalam kolom id_rekening dalam tabel Rekening_Bank yang akan menghubungkan tabel Transaksi dengan tabel Rekening_Bank.
 # Data Tabel Transaksi
 ![data transaksi](https://github.com/HafidzAshshidiqi/BASDA-Laporan-3/assets/125180024/acbc52a8-fe03-4cd7-b36c-290a1712659d)
 
@@ -59,14 +62,14 @@ Pembahasan:
 
 Data pada gambar diatas merupakan contoh dari data transaksi di sistem nasabah bank dalam sebuah database.
 # Tabel Cabang Bank
-![Table Cabang](https://github.com/HafidzAshshidiqi/BASDA-Laporan-3/assets/125180024/22b8b580-393f-4388-85c5-d997a15b9e70)
+![tabel cabang_bank](https://github.com/HafidzAshshidiqi/BASDA-Laporan-3/assets/125180024/25b59d43-81a4-4995-8e53-2b2aa040e1fc)
 
 Pembahasan:
 
-Tabel Petugas_Bank digunakan untuk menyimpan informasi tentang petugas atau karyawan bank yang mungkin terlibat dalam berbagai aktivitas dalam sistem.
-Struktur tabel ini mungkin mencakup kolom seperti ID Petugas, Nama Petugas, Jabatan, dan Cabang_ID (kunci asing yang menghubungkan petugas dengan cabang bank tertentu).
-ID Petugas biasanya digunakan sebagai kunci utama.
-
+Tabel Cabang_Bank digunakan untuk menyimpan informasi tentang cabang-cabang bank yang mungkin memiliki beberapa lokasi fisik.
+Struktur tabel ini mungkin mencakup kolom seperti ID Cabang, ID Petugas, Nama Cabang, Alamat, Nomor Telepon, dan informasi lainnya yang berkaitan dengan cabang bank.
+ID Cabang biasanya digunakan sebagai Primary KEY.
+ID Petugas dideklarasikan sebagai Foreign KEY yang mengambil dalam kolom id_petugas dalam tabel Petugas_Bank yang akan menghubungkan tabel Cabang_Bank dengan tabel Petugas_Bank.
 # Data Tabel Cabang bank
 ![Data Cabang](https://github.com/HafidzAshshidiqi/BASDA-Laporan-3/assets/125180024/0b74d1cb-7216-4e68-9a50-04828db4d921)
 
@@ -74,13 +77,14 @@ Pembahasan:
 
 Data pada gambar diatas merupakan contoh dari data cabang_bank dalam sistem nasabah bank dalam sebuah database.
 # Tabel Petugas Bank
-![Table Petugas bank](https://github.com/HafidzAshshidiqi/BASDA-Laporan-3/assets/125180024/05ab9ca6-bdbc-4773-95aa-076331ace6b8)
+![tabel petugas bank](https://github.com/HafidzAshshidiqi/BASDA-Laporan-3/assets/125180024/caf01429-caaa-41e3-91be-cb1e190a38f1)
 
 Pembahasan:
 
-Tabel Cabang_Bank digunakan untuk menyimpan informasi tentang cabang-cabang bank yang mungkin memiliki beberapa lokasi fisik.
-Struktur tabel ini mungkin mencakup kolom seperti ID Cabang, Nama Cabang, Alamat, Nomor Telepon, dan informasi lainnya yang berkaitan dengan cabang bank.
-ID Cabang biasanya digunakan sebagai kunci utama.
+Tabel Petugas_Bank digunakan untuk menyimpan informasi tentang petugas atau karyawan bank yang mungkin terlibat dalam berbagai aktivitas dalam sistem.
+Struktur tabel ini mungkin mencakup kolom seperti ID Petugas, Nama Petugas, Jabatan, dan ID Cabang. 
+ID Petugas biasanya digunakan sebagai Primary KEY.
+ID Cabang dideklarasikan sebagai Foreign KEY yang mengambil dalam kolom id_cabang dalam tabel Cabang_Bank yang akan menghubungkan tabel Petugas_Bank dengan tabel Cabang_Bank.
 # Data Tabel Petugas Bank
 ![data petugas bank](https://github.com/HafidzAshshidiqi/BASDA-Laporan-3/assets/125180024/3142c025-4b29-41ba-8e4b-78d93b3de653)
 Pembahasan:
