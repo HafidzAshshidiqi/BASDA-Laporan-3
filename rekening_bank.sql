@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 22, 2023 at 07:08 AM
+-- Generation Time: Sep 23, 2023 at 12:19 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.11
 
@@ -30,6 +30,8 @@ SET time_zone = "+00:00";
 CREATE TABLE `rekening_bank` (
   `id_rekening` int(25) NOT NULL,
   `id_nasabah` int(10) DEFAULT NULL,
+  `id_transaksi` int(16) DEFAULT NULL,
+  `id_petugas` int(16) DEFAULT NULL,
   `asal_bank` varchar(10) DEFAULT NULL,
   `kode_rekening` int(6) DEFAULT NULL,
   `saldo` int(15) DEFAULT NULL,
@@ -46,7 +48,9 @@ CREATE TABLE `rekening_bank` (
 --
 ALTER TABLE `rekening_bank`
   ADD PRIMARY KEY (`id_rekening`),
-  ADD KEY `id_nasabah` (`id_nasabah`);
+  ADD KEY `id_nasabah` (`id_nasabah`),
+  ADD KEY `id_transaksi` (`id_transaksi`),
+  ADD KEY `id_petugas` (`id_petugas`);
 
 --
 -- Constraints for dumped tables
@@ -56,7 +60,9 @@ ALTER TABLE `rekening_bank`
 -- Constraints for table `rekening_bank`
 --
 ALTER TABLE `rekening_bank`
-  ADD CONSTRAINT `rekening_bank_ibfk_1` FOREIGN KEY (`id_nasabah`) REFERENCES `nasabah` (`id_nasabah`);
+  ADD CONSTRAINT `rekening_bank_ibfk_1` FOREIGN KEY (`id_nasabah`) REFERENCES `nasabah` (`id_nasabah`),
+  ADD CONSTRAINT `rekening_bank_ibfk_2` FOREIGN KEY (`id_transaksi`) REFERENCES `transaksi` (`id_transaksi`),
+  ADD CONSTRAINT `rekening_bank_ibfk_3` FOREIGN KEY (`id_petugas`) REFERENCES `petugas_bank` (`id_petugas`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
