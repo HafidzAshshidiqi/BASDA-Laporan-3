@@ -32,7 +32,8 @@ Pembahasan :
 
 Data pada gambar diatas merupakan sebuah contoh dari data dalam Nasabah di sistem nasabah bank dalam sebuah database.
 # Tabel Rekening Bank
-![tabel rekening bank](https://github.com/HafidzAshshidiqi/BASDA-Laporan-3/assets/125180024/6ea53952-27b2-4fa7-a746-04328760c007)
+![image](https://github.com/HafidzAshshidiqi/BASDA-Laporan-3/assets/125180024/1499c1fe-5ede-49c0-9667-2d56f3553191)
+
 
 Pembahasan:
 
