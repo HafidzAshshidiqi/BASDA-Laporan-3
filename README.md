@@ -40,7 +40,7 @@ Pembahasan:
 Tabel Rekening_Bank digunakan untuk menyimpan informasi tentang rekening bank yang dimiliki oleh nasabah.
 Struktur tabel ini mungkin mencakup kolom seperti ID Rekening, Nomor Rekening, Saldo, Tanggal Pembukaan Rekening, Jenis Rekening , dan id_Nasabah (kunci asing yang menghubungkan rekening dengan nasabah tertentu).
 ID Rekening biasanya digunakan sebagai kunci utama.
-ID Nasabah dideklarasikan sebagai Foreign KEY yang mengambil dalam kolom id_nasabah dalam tabel Nasabah_Bank yang akan menghubungkan tabel Rekening_Bank dengan tabel Nasabah.
+ID Nasabah dideklarasikan sebagai Foreign KEY yang mengambil dalam kolom id_nasabah dalam tabel Nasabah_Bank yang akan menghubungkan tabel Rekening_Bank dengan tabel Nasabah, lalu Foreign KEY id_transaksi dalam tabel Rekening_Bank yang akan menghubungkan tabel Rekening_Bank dengan tabel Transaksi dan id_petugas dalam tabel Petugas_Bank yang akan menghubungkan tabel Rekening_Bank dengan tabel Petugas_Bank.
 # Data tabel Rekening Bank
 ![data rekening bank](https://github.com/HafidzAshshidiqi/BASDA-Laporan-3/assets/125180024/4699aed5-9f7c-48c0-822c-5cc1b73d4fc7)
 
